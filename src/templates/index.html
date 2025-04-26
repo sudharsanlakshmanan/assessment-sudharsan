@@ -1,61 +1,67 @@
----
-preheader: ""
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<x-main>
-  <table class="mx-auto font-primary align-center-table">
-    <tr>
-      <td class="w-[600px] sm:w-full bg-white align-center-table max-w-[600px]">
-        <table class="w-full">
-          <tr>
-            <td>
-              <!-- Section 01 -->
-              <x-sections.section-01 />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <!-- DELETE THIS COMMENT BEFORE BUILD - ALL FRAGMENTS SHOULD BE INSIDE STANDALONE TABLE - LIKE IN EXAMPLE: -->
-              <table class="w-full">
-                <tr>
-                  <td>
-                    <x-fragments.fragment-01 />
-                    <x-fragments.fragment-02 />
-                    <x-fragments.fragment-03 />
-                    <x-fragments.fragment-04 />
-                    <x-fragments.fragment-05 />
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <!-- Section 02 -->
-              <x-sections.section-02 />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <!-- Section 03 -->
-              <x-sections.section-03 />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <!-- Section 04 -->
-              <x-sections.section-04 />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <!-- Section 05 -->
-              <x-sections.section-05 />
-            </td>
-          </tr>
-          <!-- Add more <tr> as shown above to add more sections, or delete unused sections -->
-        </table>
-      </td>
-    </tr>
-  </table>
-</x-main>
+    <style type="text/css">
+      /* === Reset styles === */
+      body, table, td, p, a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      table {
+        border-collapse: collapse !important;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* === Responsive styles === */
+      @media only screen and (max-width: 600px) {
+        table[class="w-full"] {
+          width: 100% !important;
+        }
+        td[class="two-columns"] {
+          display: block !important;
+          width: 100% !important;
+        }
+        td[class="column"] {
+          display: block !important;
+          width: 100% !important;
+        }
+        .mobile-center {
+          text-align: center !important;
+        }
+        .mobile-padding {
+          padding: 10px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="margin:0; padding:0;">
+    
+    <!-- === Pre-header text === -->
+    <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+      preheader: ""
+    </div>
+
+    <x-main>
+      <table class="mx-auto font-primary align-center-table" style="margin: auto; width: 600px;">
+        <tr>
+          <td style="background: #ffffff;">
+            <x-sections.section-01 />
+            <x-sections.section-02 />
+            <x-sections.section-03 />
+            <x-sections.section-04 />
+            <x-sections.section-05 />
+          </td>
+        </tr>
+      </table>
+    </x-main>
+
+  </body>
+</html>
